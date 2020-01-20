@@ -1,116 +1,206 @@
 <template>
-  <q-layout view="hHh lpR lFr">
-
-    <q-header reveal elevated class="flex flex-center column bg-primary text-white">
-      <q-toolbar class="row justify-start items-center content-center boid-font-md">
-                <q-btn style="overflow: auto;" color="primary" clickable @click="$router.push('./')" icon="img:statics/icons/boid-bird.svg"></q-btn>
-                
-    <q-btn-dropdown class="q-mx-sm" style="overflow: auto;" color="primary" label="Learn">
-      <q-list>
-        <q-item clickable v-close-popup @click="onItemClick" to="./learn-basic-lvl1">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel1" size="1em" color="primary" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Basic</q-item-label>
-            <q-item-label  class="boid-font-menu" caption>Level 1 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-        
-        <q-item clickable v-close-popup @click="onItemClick" to="./learn-basic-lvl2">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel2" size="1em" color="primary" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Basic</q-item-label>
-            <q-item-label class="boid-font-menu" caption>Level 2 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-        
-              <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel3" size="1em" color="primary" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Basic</q-item-label>
-            <q-item-label  class="boid-font-menu" caption>Level 3 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-<q-separator spaced />
-              <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel1" size="1em" color="green" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Advanced</q-item-label>
-            <q-item-label  class="boid-font-menu" caption>Level 1 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-
- <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel2" size="1em" color="green" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Advanced</q-item-label>
-            <q-item-label class="boid-font-menu" caption>Level 2 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-
-  <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel3" size="1em" color="green" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Advanced</q-item-label>
-            <q-item-label class="boid-font-menu" caption>Level 3 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-<q-separator spaced />
- <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-              <q-rating id="school-rating" icon="school" v-model="ratingModel1" size="1em" color="red" readonly max=3></q-rating>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Professional</q-item-label>
-            <q-item-label class="boid-font-menu" caption>Level 1 (Soon!)</q-item-label>
-          </q-item-section>
-       </q-item>
-      </q-list>
-    </q-btn-dropdown>
-
-    <q-btn-dropdown style="overflow: auto;" color="primary" label="Specials">
-      <q-list>
-        <q-item clickable v-close-popup @click="onItemClick" to="./sp-earthday2020">
-          <q-item-section avatar>
-            <q-icon name="img:statics/earth-planet-icon.png"/>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">EarthDay2020</q-item-label>
-          </q-item-section>
-        </q-item>
-        
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section avatar>
-            <q-icon name="img:statics/coming-soon.png"/>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu">Other (Coming Soon!)</q-item-label>
-          </q-item-section>
-        </q-item>
-
-      </q-list>
-    </q-btn-dropdown>
-
+  <q-layout view="hHh LpR fFf">
+    <q-header elevated class="bg-primary text-white">
+      <q-toolbar>
+        <q-btn dense flat round icon="img:statics/icons/boid-bird.svg" @click="left = !left" />
+         <q-toolbar-title class="boid-font-lg">
+              <q-toolbar-label clickable @click="$router.push('./')" ><b>boid</b> docs</q-toolbar-label>
+         </q-toolbar-title>
+         <q-btn dense flat round icon="subject" @click="right = !right"/>
       </q-toolbar>
-
    </q-header>
 
-    
+  <q-drawer show-if-above
+          v-model="left"
+          side="left" elevated
+          :width="200"
+          :breakpoint="200"
+          bordered
+          content-class="bg-grey-3">         
+<q-list dense bordered padding class="rounded-borders">
+       <q-item >
+            <q-item-section avatar>
+            <q-icon color="grey-8" name="account_circle"/>
+          </q-item-section>
+  <q-item-section>
+            <q-item-label class="boid-font-menu"><b>How to start</b></q-item-label>
+          </q-item-section>
+        </q-item>
+         
+            <q-item clickable v-ripple tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+              <q-item-section>
+                <q-item-label class="boid-font-menu">Introduction</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Mainnet Mechanics</q-item-label>
+          </q-item-section>
+        </q-item>
+            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Boid Power Mechanics</q-item-label>
+          </q-item-section>
+        </q-item>
+         <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Teams</q-item-label>
+          </q-item-section>
+        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item-label class="boid-font-menu">EOS account</q-item-label>
+          </q-item-section>
+        </q-item>
+                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">proxy</q-item-label>
+          </q-item-section>
+        </q-item>
+                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">FAQ</q-item-label>
+          </q-item-section>
+        </q-item>
+        
+           </q-list>
+           <q-list dense bordered padding class="rounded-borders">
+                   <q-item>
+            <q-item-section avatar>
+            <q-icon color="grey-8" name="code" />
+          </q-item-section>
+  <q-item-section>
+            <q-item-label class="boid-font-menu"><b>Installation</b></q-item-label>
+          </q-item-section>
+        </q-item>
+                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Windows</q-item-label>
+          </q-item-section>
+        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Linux</q-item-label>
+          </q-item-section>
+        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">MAC</q-item-label>
+          </q-item-section>
+        </q-item>
+<q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Validators setup</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        </q-list>
+        <q-list dense bordered padding class="rounded-borders">
+        <q-item>         
+                    <q-item-section avatar>
+            <q-icon color="grey-8" name="build" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="boid-font-menu"><b>Hardware</b></q-item-label>
+          </q-item-section>
+        </q-item>
+           <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">CPU</q-item-label>
+          </q-item-section>
+        </q-item>
+            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">GPU</q-item-label>
+          </q-item-section>
+        </q-item>
+        </q-list>
+
+<q-list dense bordered padding class="rounded-borders">
+        <q-item >
+          <q-item-section avatar>
+            <q-icon name="img:statics/icons/eos.svg" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="boid-font-menu"><b>EOS contracts</b></q-item-label>
+          </q-item-section>
+        </q-item><q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                  <q-item-section>
+            <q-item-label class="boid-font-menu">Stake, unstake, delegate</q-item-label>
+          </q-item-section>
+        </q-item><q-item clickable tag="a" href="../#/claim">
+                  <q-item-section>
+            <q-item-label class="boid-font-menu">Claim</q-item-label>
+          </q-item-section>
+        </q-item>
+     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item-section>
+            <q-item-label class="boid-font-menu">Transtake</q-item-label>
+          </q-item-section>
+        </q-item>
+            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item-section>
+            <q-item-label class="boid-font-menu">Transfer</q-item-label>
+          </q-item-section>
+        </q-item>
+</q-list>
+<q-list dense bordered padding class="rounded-borders">
+            <q-item>
+                        <q-item-section avatar>
+            <q-icon color="grey-8" name="vertical_split" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="boid-font-menu"><b>Additional Info</b></q-item-label>
+          </q-item-section>
+        </q-item>
+           <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Media</q-item-label>
+          </q-item-section>
+        </q-item> 
+                   <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                  <q-item-section>
+            <q-item-label class="boid-font-menu">Exchanges</q-item-label>
+          </q-item-section>
+        </q-item>
+                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item-section>
+            <q-item-label class="boid-font-menu">Partnership</q-item-label>
+          </q-item-section>
+        </q-item>
+                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                  <q-item-section>
+            <q-item-label class="boid-font-menu">Timeline</q-item-label>
+          </q-item-section>
+        </q-item>
+                   <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                  <q-item-section>
+            <q-item-label class="boid-font-menu">Graphics</q-item-label>
+          </q-item-section>
+        </q-item>
+        </q-list>
+
+  </q-drawer>
+
+   <q-drawer show-if-above v-model="right" side="right" elevated>
+      <ul class="sidebar-menu">
+    <li class="header">TOOLS</li>
+    <router-link tag="li" class="pageLink" to="/">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Dashboard</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/tables">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Tables</span>
+      </a>
+    </router-link>
+
+  </ul>
+    </q-drawer>
+
     <q-page-container>
       <router-view />
     </q-page-container>
-
 
 <q-footer reveal elevated class="flex flex-center column bg-grey-8">
   <q-toolbar class="row justify-start items-center content-center boid-font-footer">
@@ -124,7 +214,7 @@
           <q-item-section>
             <q-item-label class="boid-font-menu">Community</q-item-label>
           </q-item-section>
-        </q-item>
+        </q-item>     
         <q-item clickable tag="a" target="_blank" href="https://t.me/Boidcom_official">
           <q-item-section avatar>
             <q-icon name="img:statics/icons/telegram.svg" />
@@ -176,6 +266,14 @@
           </q-item-section>
           <q-item-section>
             <q-item-label class="boid-font-menu">APP Web</q-item-label>
+          </q-item-section>
+        </q-item>
+         <q-item clickable tag="a" target="_blank" href="https://learn.boid.com">
+          <q-item-section avatar>
+            <q-icon name="img:statics/icons/school.svg" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="boid-font-menu">Learn</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://docs.boid.com">
@@ -266,10 +364,10 @@
 <script>
 export default {
   data () {
+
     return {
-      ratingModel1: 1,
-      ratingModel2: 2,
-      ratingModel3: 3
+      left: true,
+      right: true
     }
   }
 }
