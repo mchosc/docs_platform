@@ -13,169 +13,162 @@
   <q-drawer show-if-above
           v-model="left"
           side="left" elevated
-          :width="200"
+          :width="225"
           :breakpoint="200"
           bordered
-          content-class="bg-grey-3">         
-<q-list dense bordered padding class="rounded-borders">
-       <q-item >
-            <q-item-section avatar>
-            <q-icon color="grey-8" name="account_circle"/>
-          </q-item-section>
-  <q-item-section>
-            <q-item-label class="boid-font-menu"><b>How to start</b></q-item-label>
-          </q-item-section>
-        </q-item>
-         
+          content-class="bg-grey-3"
+          text-color="grey-6">
+
+       <q-expansion-item
+        dense-toggle
+        expand-separator
+        icon="account_circle"
+        label="How to start"
+      >
+       
             <q-item clickable v-ripple tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
               <q-item-section>
-                <q-item-label class="boid-font-menu">Introduction</q-item-label>
+                <q-item-label>Introduction</q-item-label>
               </q-item-section>
             </q-item>
 
             <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Mainnet Mechanics</q-item-label>
+            <q-item-label>Mainnet Mechanics</q-item-label>
           </q-item-section>
         </q-item>
             <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Boid Power Mechanics</q-item-label>
+            <q-item-label>Boid Power Mechanics</q-item-label>
           </q-item-section>
         </q-item>
          <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Teams</q-item-label>
+            <q-item-label>Teams</q-item-label>
           </q-item-section>
         </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
-            <q-item-label class="boid-font-menu">EOS account</q-item-label>
+            <q-item-label>EOS account</q-item-label>
           </q-item-section>
         </q-item>
                     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">proxy</q-item-label>
+            <q-item-label>proxy</q-item-label>
           </q-item-section>
         </q-item>
                     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">FAQ</q-item-label>
+            <q-item-label>FAQ</q-item-label>
           </q-item-section>
         </q-item>
-        
-           </q-list>
-           <q-list dense bordered padding class="rounded-borders">
-                   <q-item>
-            <q-item-section avatar>
-            <q-icon color="grey-8" name="code" />
-          </q-item-section>
-  <q-item-section>
-            <q-item-label class="boid-font-menu"><b>Installation</b></q-item-label>
-          </q-item-section>
-        </q-item>
-                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+        </q-expansion-item>
+
+ <q-expansion-item
+        dense-toggle
+        expand-separator
+        icon="code"
+        label="Installation"
+      >
+         <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Windows</q-item-label>
+            <q-item-label>Windows</q-item-label>
           </q-item-section>
         </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Linux</q-item-label>
+            <q-item-label>Linux</q-item-label>
           </q-item-section>
         </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">MAC</q-item-label>
+            <q-item-label>MAC</q-item-label>
           </q-item-section>
         </q-item>
 <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Validators setup</q-item-label>
+            <q-item-label>Validators setup</q-item-label>
           </q-item-section>
         </q-item>
+</q-expansion-item>
+ 
+ <q-expansion-item
+        dense-toggle
+        expand-separator
+        icon="build"
+        label="Hardware"
+      >
 
-        </q-list>
-        <q-list dense bordered padding class="rounded-borders">
-        <q-item>         
-                    <q-item-section avatar>
-            <q-icon color="grey-8" name="build" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu"><b>Hardware</b></q-item-label>
-          </q-item-section>
-        </q-item>
            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">CPU</q-item-label>
+            <q-item-label>CPU</q-item-label>
           </q-item-section>
         </q-item>
             <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">GPU</q-item-label>
+            <q-item-label>GPU</q-item-label>
           </q-item-section>
         </q-item>
-        </q-list>
+ </q-expansion-item>
 
-<q-list dense bordered padding class="rounded-borders">
-        <q-item >
-          <q-item-section avatar>
-            <q-icon name="img:statics/icons/eos.svg" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu"><b>EOS contracts</b></q-item-label>
-          </q-item-section>
-        </q-item><q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+<q-expansion-item
+        dense-toggle
+        expand-separator
+        icon="img:statics/icons/eos.svg"
+        label="EOS contracts"
+      >
+ <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
-            <q-item-label class="boid-font-menu">Stake, unstake, delegate</q-item-label>
+            <q-item-label>Stake, unstake, delegate</q-item-label>
           </q-item-section>
         </q-item><q-item clickable tag="a" href="../#/claim">
                   <q-item-section>
-            <q-item-label class="boid-font-menu">Claim</q-item-label>
+            <q-item-label>Claim</q-item-label>
           </q-item-section>
         </q-item>
      <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
-            <q-item-label class="boid-font-menu">Transtake</q-item-label>
+            <q-item-label>Transtake</q-item-label>
           </q-item-section>
         </q-item>
             <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
-            <q-item-label class="boid-font-menu">Transfer</q-item-label>
+            <q-item-label>Transfer</q-item-label>
           </q-item-section>
         </q-item>
-</q-list>
-<q-list dense bordered padding class="rounded-borders">
-            <q-item>
-                        <q-item-section avatar>
-            <q-icon color="grey-8" name="vertical_split" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label class="boid-font-menu"><b>Additional Info</b></q-item-label>
-          </q-item-section>
-        </q-item>
+</q-expansion-item>
+           
+
+      <q-expansion-item
+        dense-toggle
+        expand-separator
+        icon="vertical_split"
+        label="Additional Info"
+      >
            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
-            <q-item-label class="boid-font-menu">Media</q-item-label>
+            <q-item-label>Media</q-item-label>
           </q-item-section>
         </q-item> 
                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
-            <q-item-label class="boid-font-menu">Exchanges</q-item-label>
+            <q-item-label>Exchanges</q-item-label>
           </q-item-section>
         </q-item>
                     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
-            <q-item-label class="boid-font-menu">Partnership</q-item-label>
+            <q-item-label>Partnership</q-item-label>
           </q-item-section>
         </q-item>
                     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
-            <q-item-label class="boid-font-menu">Timeline</q-item-label>
+            <q-item-label>Timeline</q-item-label>
           </q-item-section>
         </q-item>
                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
-            <q-item-label class="boid-font-menu">Graphics</q-item-label>
+            <q-item-label>Graphics</q-item-label>
           </q-item-section>
         </q-item>
-        </q-list>
+              </q-expansion-item>
+         
+
 
   </q-drawer>
 
@@ -212,7 +205,7 @@
             <q-icon name="img:statics/icons/handshake.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Community</q-item-label>
+            <q-item-label>Community</q-item-label>
           </q-item-section>
         </q-item>     
         <q-item clickable tag="a" target="_blank" href="https://t.me/Boidcom_official">
@@ -220,7 +213,7 @@
             <q-icon name="img:statics/icons/telegram.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Telegram</q-item-label>
+            <q-item-label>Telegram</q-item-label>
           </q-item-section>
           </q-item>
        <q-item clickable tag="a" target="_blank" href="https://discord.gg/Frm38a6">
@@ -228,7 +221,7 @@
             <q-icon name="img:statics/icons/discord.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Discord</q-item-label>
+            <q-item-label>Discord</q-item-label>
           </q-item-section>
         </q-item>
        <q-item clickable tag="a" target="_blank" href="https://twitter.com/boidcom">
@@ -236,7 +229,7 @@
             <q-icon name="img:statics/icons/twitter.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Twitter</q-item-label>
+            <q-item-label>Twitter</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://www.facebook.com/boidcom">
@@ -244,7 +237,7 @@
             <q-icon name="img:statics/icons/facebook.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Facebook</q-item-label>
+            <q-item-label>Facebook</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://www.youtube.com/channel/UCL4I3DksM41qPKih2PbiQ7g/featured">
@@ -252,7 +245,7 @@
             <q-icon name="img:statics/icons/youtube.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Youtube</q-item-label>
+            <q-item-label>Youtube</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
@@ -265,7 +258,7 @@
             <q-icon name="img:statics/icons/boid-bird.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">APP Web</q-item-label>
+            <q-item-label>APP Web</q-item-label>
           </q-item-section>
         </q-item>
          <q-item clickable tag="a" target="_blank" href="https://learn.boid.com">
@@ -273,7 +266,7 @@
             <q-icon name="img:statics/icons/school.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Learn</q-item-label>
+            <q-item-label>Learn</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://docs.boid.com">
@@ -281,7 +274,7 @@
             <q-icon name="img:statics/icons/documents.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Documentation</q-item-label>
+            <q-item-label>Documentation</q-item-label>
           </q-item-section>
         </q-item>
       <q-item clickable tag="a" target="_blank" href="https://stats.boid.com">
@@ -289,11 +282,10 @@
             <q-icon name="img:statics/icons/stats.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Statistics</q-item-label>
+            <q-item-label>Statistics</q-item-label>
           </q-item-section>
       </q-item>
 
-<q-separator spaced />
         <q-item
           clickable
           tag="a"
@@ -304,7 +296,7 @@
             <q-icon name="img:statics/icons/github.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Github</q-item-label>
+            <q-item-label>Github</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -313,16 +305,16 @@
             <q-icon name="img:statics/icons/bloks-io-logo-vector.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Token contract</q-item-label>
+            <q-item-label>Token contract</q-item-label>
           </q-item-section>
 </q-item>
-<q-separator spaced />
+
 <q-item clickable tag="a" target="_blank" href="https://everipedia.org/wiki/lang_en/boid-1">
           <q-item-section avatar>
             <q-icon name="img:statics/icons/everipedia.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Everipedia</q-item-label>
+            <q-item-label>Everipedia</q-item-label>
           </q-item-section>
 </q-item>
 
@@ -331,28 +323,25 @@
             <q-icon name="img:statics/icons/wcg-logo.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">WCG stats</q-item-label>
+            <q-item-label>WCG stats</q-item-label>
           </q-item-section>
 </q-item>
-<q-separator spaced />
 <q-item clickable tag="a" target="_blank" href="https://bloks.io/tokens/BOID-eos-boidcomtoken">
           <q-item-section avatar>
             <q-icon name="img:statics/icons/token.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Highest holders</q-item-label>
+            <q-item-label>Highest holders</q-item-label>
           </q-item-section>
 </q-item>
-
 <q-item clickable tag="a" target="_blank" href="https://bloks.io/account/boidworkfund">
           <q-item-section avatar>
             <q-icon name="img:statics/icons/token-more.svg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="boid-font-menu">Work fund status</q-item-label>
+            <q-item-label>Work fund status</q-item-label>
           </q-item-section>
 </q-item>
-
       </q-list>
     </q-btn-dropdown>
 </q-toolbar>
