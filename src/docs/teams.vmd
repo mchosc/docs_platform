@@ -1,7 +1,10 @@
 ---
 id: teams
-title: Teams
+title: Boid Teams
 ---
+<template>
+<div class="q-pa-md q-gutter-sm q-markdown">
+
 ## Team Bonus
 Each Boid team has a team bonus built in. This bonus requires no investment from the team leader, and is designed to provide a slight advantage to lower-performing teams. The team bonus is expressed as a simple earnings multiplier with a natural range between.1% (The team at the top of the leaderboard) to 1.5% (the team at the bottom of the leaderboard). When new users join Boid and needs to decide what team to join, the join team dialogue presents teams to them in the order of highest team bonus to lowest. Optionally, team leaders can opt to stake additional BOID tokens. These tokens act as a multiplier on top of the team bonus.
 
@@ -65,3 +68,36 @@ Physical Rewards can be offered such as exclusive team swag, computer hardware, 
 - MeetOne
 - EOSphere
 - BeyondBitcoin
+
+ </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      // eslint-disable-next-line
+      frontMatter: {},
+      // eslint-disable-next-line
+      tocData: []
+    }
+  },
+
+  mounted () {
+    this.toc = this.tocData
+    document.title = this.frontMatter.title
+  },
+
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('common/toc', toc)
+      }
+    }
+  }
+}
+</script>

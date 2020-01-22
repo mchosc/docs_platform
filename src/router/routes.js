@@ -1,8 +1,11 @@
 const routes = [
-  {path: "/", component: () => import("layouts/MyLayout.vue"), children: [{ path: "", component: () => import("pages/Index.vue") }]},
-  {path: "/claim", component: () => import("layouts/MyLayout.vue"), children: [{ path: "", component: () => import("pages/claim.vue") }]},
-  {path: "/mainnet", component: () => import("layouts/MyLayout.vue"), children: [{ path: "", component: () => import("pages/mainnet.vue") }]},
-  {path: "/sp-earthday2020", component: () => import("layouts/MyLayout.vue"), children: [{ path: "", component: () => import("pages/sp-earthday2020.vue") }]}
+  {path: "/", component: () => import("layouts/MainLayout.vue"), children: [{ path: "/", component: (Pagedocs) => import("pages/introduction.vue") }]},
+  {path: "/mainnet", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/mainnet.vue") }]},
+  {path: "/boidpower", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/boidpower.vue") }]},
+  {path: "/teams", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/teams.vue") }]},
+  {path: "/eosaccount", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/eosaccount.vue") }]},
+  {path: "/claim", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/claim.vue") }]},
+  {path: "/addinfo", component: () => import("layouts/MainLayout.vue"), children: [{ path: "", component: () => import("pages/graphics.vue") }]}
 ];
 
 // Always leave this as last one

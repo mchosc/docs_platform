@@ -1,7 +1,6 @@
 ---
 id: exchanges
 title: Exchanges
-sidebar_label: Exchanges
 ---
 <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
 <coingecko-coin-ticker-widget  coin-id="boid" currency="usd" locale="en"></coingecko-coin-ticker-widget>  

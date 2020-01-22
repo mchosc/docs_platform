@@ -1,8 +1,12 @@
 ---
 id: graphics
 title: Graphics material
-sidebar_label: Graphics material
 ---
+
+
+<template>
+<div class="q-pa-md q-gutter-sm q-markdown">
+
 ## Boid color codes
 
 ```
@@ -56,3 +60,36 @@ Download Boid power SVG file:
 ```
 https://docs.boid.com/img/graphics/BoidPower.svg
 ```
+
+ </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      // eslint-disable-next-line
+      frontMatter: {},
+      // eslint-disable-next-line
+      tocData: []
+    }
+  },
+
+  mounted () {
+    this.toc = this.tocData
+    document.title = this.frontMatter.title
+  },
+
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('common/toc', toc)
+      }
+    }
+  }
+}
+</script>

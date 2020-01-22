@@ -1,8 +1,13 @@
+
+<template>
+<div class="q-pa-md q-gutter-sm q-markdown">
+
 ---
-id: eos_account
+id: eosaccount
 title: EOS account
-sidebar_label: EOS account
 ---
+
+
 >You need to link your EOS account to Boid to be able to stake BOID tokens.
 
 If you already have an EOS account - Great! Just link it to your Boid account on the app.boid.com site. When everything is setup you should be able to claim your BOID tokens straight to your EOS account or have stake delegated to you.
@@ -18,3 +23,35 @@ Wombat gives you a free EOS account with some limitations. You can pay to upgrad
 EOS Name Service allows you to purchase custom and premium EOS account names using many different payment methods.
 #### Use pending BOID Balance
 If you don't have an account already connected to app.boid.com eventually you should be able to gather right amount of BOID tokens to create an EOS account.
+ </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      // eslint-disable-next-line
+      frontMatter: {},
+      // eslint-disable-next-line
+      tocData: []
+    }
+  },
+
+  mounted () {
+    this.toc = this.tocData
+    document.title = this.frontMatter.title
+  },
+
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('common/toc', toc)
+      }
+    }
+  }
+}
+</script>

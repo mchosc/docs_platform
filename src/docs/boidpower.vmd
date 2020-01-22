@@ -1,8 +1,11 @@
 ---
 id: boidpower
 title: Boid power mechanics
-sidebar_label: Boid power mechanics
 ---
+
+<template>
+<div class="q-pa-md q-gutter-sm q-markdown">
+
 # Bonus parameters
 
 ## Stake difficulty
@@ -88,3 +91,36 @@ days vs bonus.
 ![Power Example 8](/img/power_examples_8.png "Power Example 8")
 ![Power Example 95](/img/power_examples_9.png "Power Example 9")
 ![Power Example 10](/img/power_examples_10.png "Power Example 10")
+
+ </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      // eslint-disable-next-line
+      frontMatter: {},
+      // eslint-disable-next-line
+      tocData: []
+    }
+  },
+
+  mounted () {
+    this.toc = this.tocData
+    document.title = this.frontMatter.title
+  },
+
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('common/toc', toc)
+      }
+    }
+  }
+}
+</script>
