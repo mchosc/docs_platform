@@ -26,36 +26,37 @@
         label="How to start"
       >
        
-            <q-item clickable v-ripple tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item clickable dense v-ripple tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
               <q-item-section>
                 <q-item-label>Introduction</q-item-label>
               </q-item-section>
             </q-item>
 
-            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item clickable dense tag="a" href="../#/mainnet">
           <q-item-section>
             <q-item-label>Mainnet Mechanics</q-item-label>
           </q-item-section>
         </q-item>
-            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Boid Power Mechanics</q-item-label>
           </q-item-section>
         </q-item>
-         <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+         <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Teams</q-item-label>
           </q-item-section>
-        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+        </q-item> 
+         <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
             <q-item-label>EOS account</q-item-label>
           </q-item-section>
         </q-item>
-                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>proxy</q-item-label>
           </q-item-section>
         </q-item>
-                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>FAQ</q-item-label>
           </q-item-section>
@@ -68,20 +69,20 @@
         icon="code"
         label="Installation"
       >
-         <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+         <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Windows</q-item-label>
           </q-item-section>
-        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+        </q-item>            <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Linux</q-item-label>
           </q-item-section>
-        </q-item>            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+        </q-item>            <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>MAC</q-item-label>
           </q-item-section>
         </q-item>
-<q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+<q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Validators setup</q-item-label>
           </q-item-section>
@@ -95,12 +96,12 @@
         label="Hardware"
       >
 
-           <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+           <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>CPU</q-item-label>
           </q-item-section>
         </q-item>
-            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>GPU</q-item-label>
           </q-item-section>
@@ -113,21 +114,21 @@
         icon="img:statics/icons/eos.svg"
         label="EOS contracts"
       >
- <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+ <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
             <q-item-label>Stake, unstake, delegate</q-item-label>
           </q-item-section>
-        </q-item><q-item clickable tag="a" href="../#/claim">
+        </q-item><q-item clickable dense tag="a" href="../#/claim">
                   <q-item-section>
             <q-item-label>Claim</q-item-label>
           </q-item-section>
         </q-item>
-     <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+     <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
             <q-item-label>Transtake</q-item-label>
           </q-item-section>
         </q-item>
-            <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+            <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
             <q-item-label>Transfer</q-item-label>
           </q-item-section>
@@ -141,27 +142,27 @@
         icon="vertical_split"
         label="Additional Info"
       >
-           <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+           <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
           <q-item-section>
             <q-item-label>Media</q-item-label>
           </q-item-section>
         </q-item> 
-                   <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                   <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
             <q-item-label>Exchanges</q-item-label>
           </q-item-section>
         </q-item>
-                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                     <q-item-section>
             <q-item-label>Partnership</q-item-label>
           </q-item-section>
         </q-item>
-                    <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                    <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
             <q-item-label>Timeline</q-item-label>
           </q-item-section>
         </q-item>
-                   <q-item clickable tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
+                   <q-item clickable dense tag="a" target="_blank" href="https://www.worldcommunitygrid.org/stat/viewMemberInfo.do?userName=boid.com">
                   <q-item-section>
             <q-item-label>Graphics</q-item-label>
           </q-item-section>
@@ -172,25 +173,8 @@
 
   </q-drawer>
 
-   <q-drawer show-if-above v-model="right" side="right" elevated>
-      <ul class="sidebar-menu">
-    <li class="header">TOOLS</li>
-    <router-link tag="li" class="pageLink" to="/">
-      <a>
-        <i class="fa fa-desktop"></i>
-        <span class="page">Dashboard</span>
-      </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
-      <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Tables</span>
-      </a>
-    </router-link>
-
-  </ul>
-    </q-drawer>
-
+   <q-drawer show-if-above v-model="right" side="right" elevated tocData/>
+    
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -358,6 +342,23 @@ export default {
       left: true,
       right: true
     }
+  },
+
+ mounted () {
+    this.toc = this.tocData
+  },
+
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('toc', toc)
+      }
+    }
   }
+
 }
 </script>

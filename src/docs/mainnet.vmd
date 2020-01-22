@@ -1,3 +1,12 @@
+---
+id: mainnet
+title: Mainnet mechanics
+sidebar_label: Boid Mainnet mechanics
+---
+
+<template>
+<div class="q-pa-md q-gutter-sm q-markdown">
+
 # How everything works
 
 ![Mainnet](/statics/img/mainnet.jpeg "Mainnet")
@@ -182,8 +191,35 @@ A platform where individuals and organizations can upload compute work units of 
 Similar in some ways to BAT except a much easier onboarding experience. Websites can offer users VIP access in exchange for a small cut of the user BOID mining profits. Users can have an ad-free experience while still supporting the sites they visit and without ever opening up their wallet. Could evolve into a patreon-like platform where anyone could setup a custom BoidWeb page and offer rewards to users for contributing their mining profits. Could automatically contribute funds to YT channel creators as you watch their videos for example. 
 ### Boid Drive
 Integrated into the Boid app, a cross between automated backup solutions such as Backblaze and Dropbox. Users can stake BOID for long term data backup and storage which is encrypted locally and spread across all Boid client machines. Users can also pay a fee, which automatically comes from mining profits, to get low-latency data syncing service similar to Dropbox. Low-latency service would be primarily served by Validators for improved responsiveness and reliability. Validators could collect the fees for the low-latency service, while Boid Power could be used to reward Boid users who provide HDD space for the long-term backup solution.
+ </div>
+</template>
 
+<script>
+export default {
+  data () {
+    return {
+      // eslint-disable-next-line
+      frontMatter: {},
+      // eslint-disable-next-line
+      tocData: []
+    }
+  },
 
+  mounted () {
+    this.toc = this.tocData
+    document.title = this.frontMatter.title
+  },
 
-
-[Jump to Installation Types](#Boid-DAC-Custodians)
+  computed: {
+    toc:
+    {
+      get () {
+        return this.$store.state.common.toc
+      },
+      set (toc) {
+        this.$store.commit('common/toc', toc)
+      }
+    }
+  }
+}
+</script>
