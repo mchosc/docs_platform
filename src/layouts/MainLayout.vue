@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-btn dense flat round icon="img:statics/icons/boid-bird.svg" @click="left = !left" />
          <q-toolbar-title class="boid-font-lg">
-              <q-toolbar-label clickable @click="$router.push('./')" ><b>boid</b> docs</q-toolbar-label>
+              <div clickable @click="$router.push('./')" ><b>boid</b> docs</div>
          </q-toolbar-title>
          <q-btn dense flat round icon="subject" @click="right = !right"/>
       </q-toolbar>
@@ -26,7 +26,11 @@
           <addinfo-links />
   </q-drawer>
 
-   <q-drawer show-if-above v-model="right" side="right" elevated tocData/>
+   <q-drawer show-if-above v-model="right" side="right" elevated>
+   {{$store.data.toc}}
+   </q-drawer>
+  
+  
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -71,18 +75,5 @@ export default {
  mounted () {
     this.toc = this.tocData
   },
-
-  computed: {
-    toc:
-    {
-      get () {
-        return this.$store.state.common.toc
-      },
-      set (toc) {
-        this.$store.commit('toc', toc)
-      }
-    }
-  }
-
 }
 </script>
